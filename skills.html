@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills - Bassant Adel</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="experience.html">Experience</a>
+    <a href="projects.html">Projects</a>
+    <a href="skills.html">Skills</a>
+    <a href="education.html">Education</a>
+    <a href="awards.html">Awards</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Skills Section -->
+  <section class="section section-bg-white">
+    <div class="container">
+      <h2 class="section-title scroll-fade">Technical Skills</h2>
+      
+      <div class="skills-grid">
+        <!-- AI & ML Tools -->
+        <div class="card skill-card ai scroll-fade">
+          <h3 class="card-title" style="display: flex; align-items: center; gap: 0.5rem; color: #1d4ed8;">
+            <i data-lucide="brain"></i>
+            AI & ML Tools
+          </h3>
+          <div class="skill-tags">
+            <span class="skill-tag blue">Python</span>
+            <span class="skill-tag blue">Machine Learning</span>
+            <span class="skill-tag blue">AI Model Development</span>
+          </div>
+        </div>
+
+        <!-- Data Analysis -->
+        <div class="card skill-card data scroll-fade">
+          <h3 class="card-title" style="display: flex; align-items: center; gap: 0.5rem; color: #6d28d9;">
+            <i data-lucide="database"></i>
+            Data Analysis
+          </h3>
+          <div class="skill-tags">
+            <span class="skill-tag purple">Power BI</span>
+            <span class="skill-tag purple">Excel</span>
+            <span class="skill-tag purple">Data Visualization</span>
+            <span class="skill-tag purple">SQL</span>
+          </div>
+        </div>
+
+        <!-- Web Development -->
+        <div class="card skill-card web scroll-fade">
+          <h3 class="card-title" style="display: flex; align-items: center; gap: 0.5rem; color: #166534;">
+            <i data-lucide="globe"></i>
+            Web Development
+          </h3>
+          <div class="skill-tags">
+            <span class="skill-tag green">HTML</span>
+            <span class="skill-tag green">CSS</span>
+            <span class="skill-tag green">JavaScript</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">© 2024 Bassant Adel Abdu.</p>
+    </div>
+  </footer>
+
+  <script>
+  lucide.createIcons();
+
+  // Scroll-based fade-in effect
+  const faders = document.querySelectorAll('.scroll-fade');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  faders.forEach(fade => observer.observe(fade));
+</script>
+
+</body>
+</html>
